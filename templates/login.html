@@ -1,11 +1,21 @@
 {% extends "layout.html" %}
 
 {% block body %}
+    <div class="d-flex align-items-center py-4">
+        <main class="form-signin w-50 m-auto">
+            <form action="/login" method="post">
+                <h1 class="h3 mb-3 fw-normal">Inicio de sesión</h1>
 
-    <form action="/login" method="post">
-        <input autocomplete="off" autofocus name="username" placeholder="Name" type="text">
-        <input autocomplete="off" autofocus name="password" placeholder="Contraseña" type="password">
-        <button type="submit">Log In</button>
-    </form>
-
+                <div class="form-floating">
+                    <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Name" type="text">
+                    <label for="username">Usuario</label>
+                </div>
+                <div class="form-floating">
+                    <input autocomplete="off" autofocus class="form-control" name="password" placeholder="Contraseña" type="password">
+                    <label for="password">Contraseña</label>
+                </div>
+                <button class="btn btn-primary w-100 py-2 my-3" type="submit">Log In</button>
+            </form>
+        </main>
+    </div>
 {% endblock %}
