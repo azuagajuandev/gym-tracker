@@ -55,6 +55,8 @@ except sqlite3.Error as e:
 
 # Crear usuarios iniciales si no existen
 try:
+    con = get_db_connection()
+    cur = con.cursor()
     cur.execute("SELECT COUNT(*) FROM users")
     user_count = cur.fetchone()[0]
     if user_count == 0:  # Si no hay usuarios, crea los iniciales
@@ -64,6 +66,7 @@ try:
         print("Usuarios iniciales creados.")
     else:
         print("Usuarios ya existentes. No se crean nuevos.")
+    con.close()
 except sqlite3.Error as e:
     print(f"Error al crear usuarios iniciales: {e}")
 
@@ -126,7 +129,7 @@ def logout():
 def index():
     con = get_db_connection()
     cur = con.cursor()
-    cur.execute("SELECT * FROM entrenamientos")
+    cur.execute("SELECT * FROM entrenamientos WHERE user_id = ?", (current_user.id,))
     entrenamientos_db = cur.fetchall()
     con.close()
     return render_template("index.html", entrenamientos=entrenamientos_db)
