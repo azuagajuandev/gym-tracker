@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="container mt-4">
-        <h2 class="jumbotron text-center">Calentamiento</h2>
+        <h2>Calentamiento</h2>
         <ul>
             {% for key, value in rutina_json.entrada_en_calor.items() %}
                 <li><strong>{{ key | capitalize }}:</strong> {{ value }}</li>
