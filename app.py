@@ -36,6 +36,18 @@ try:
         );
     """)
     cur.execute("""
+        INSERT INTO users (
+            username, password)
+            VALUES ("juan", 1234)
+        );
+    """)
+    cur.execute("""
+        INSERT INTO users (
+            username, password)
+            VALUES ("marcio", 1234)
+        );
+    """)
+    cur.execute("""
         CREATE TABLE IF NOT EXISTS entrenamientos (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             fecha DATE NOT NULL,
