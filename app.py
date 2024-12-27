@@ -36,18 +36,6 @@ try:
         );
     """)
     cur.execute("""
-        INSERT INTO users (
-            username, password)
-            VALUES ("juan", 1234)
-        );
-    """)
-    cur.execute("""
-        INSERT INTO users (
-            username, password)
-            VALUES ("marcio", 1234)
-        );
-    """)
-    cur.execute("""
         CREATE TABLE IF NOT EXISTS entrenamientos (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             fecha DATE NOT NULL,
@@ -64,6 +52,20 @@ try:
     print("La tabla fue creada o conectada exitosamente.")
 except sqlite3.Error as e:
     print(f"Error al crear o conectar la tabla: {e}")
+
+# Crear usuarios iniciales si no existen
+try:
+    cur.execute("SELECT COUNT(*) FROM users")
+    user_count = cur.fetchone()[0]
+    if user_count == 0:  # Si no hay usuarios, crea los iniciales
+        cur.execute("INSERT INTO users (username, password) VALUES (?, ?)", ("juan", "1234"))
+        cur.execute("INSERT INTO users (username, password) VALUES (?, ?)", ("marcio", "1234"))
+        con.commit()
+        print("Usuarios iniciales creados.")
+    else:
+        print("Usuarios ya existentes. No se crean nuevos.")
+except sqlite3.Error as e:
+    print(f"Error al crear usuarios iniciales: {e}")
 
 # Leer JSON
 json_file_path = "static/rutina.json"
