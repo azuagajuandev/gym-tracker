@@ -8,20 +8,29 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="--bs-bg-opacity: .3;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" style="--bs-bg-opacity: .3;">
         <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Ingresar ejercicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/rutina">Rutina</a>
-              </li>
-            </ul>
-          </div>
+            <!-- Marca o título -->
+            <a class="navbar-brand" href="/">Gym Tracker</a>
+    
+            <!-- Botón de colapso -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Ingresar ejercicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/rutina">Rutina</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
     {% block body %}{% endblock %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
