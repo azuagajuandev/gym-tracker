@@ -58,14 +58,14 @@ try:
     con = get_db_connection()
     cur = con.cursor()
     cur.execute("SELECT COUNT(*) FROM users")
-    user_count = cur.fetchone()[0]
+    user_count = cur.fetchone()[0]  # Verifica si hay usuarios en la tabla
     if user_count == 0:  # Si no hay usuarios, crea los iniciales
         cur.execute("INSERT INTO users (username, password) VALUES (?, ?)", ("juan", "1234"))
         cur.execute("INSERT INTO users (username, password) VALUES (?, ?)", ("marcio", "1234"))
         con.commit()
-        print("Usuarios iniciales creados.")
+        print("Usuarios iniciales creados.")  # Mensaje si los usuarios son creados
     else:
-        print("Usuarios ya existentes. No se crean nuevos.")
+        print("Usuarios ya existentes. No se crean nuevos.")  # Mensaje si los usuarios ya existen
     con.close()
 except sqlite3.Error as e:
     print(f"Error al crear usuarios iniciales: {e}")
