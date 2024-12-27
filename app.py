@@ -62,6 +62,7 @@ try:
     if user_count == 0:  # Si no hay usuarios, crea los iniciales
         cur.execute("INSERT INTO users (username, password) VALUES (?, ?)", ("juan", "1234"))
         cur.execute("INSERT INTO users (username, password) VALUES (?, ?)", ("marcio", "1234"))
+        cur.execute("INSERT INTO users (username, password) VALUES (?, ?)", ("prueba", "1234"))
         con.commit()
         print("Usuarios iniciales creados.")  # Mensaje si los usuarios son creados
     else:
