@@ -121,3 +121,7 @@ def borrar():
 @app.route("/rutina")
 def rutina():
     return render_template("rutina.html", rutina_json=rutina_json)
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))  # Railway necesita usar el puerto definido por la variable de entorno
+    app.run(host='0.0.0.0', port=port)
