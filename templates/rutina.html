@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="container mt-3">
+        <h2 class="jumbotron text-center">Calentamiento</h2>
+        <ul>
+            {% for key, value in rutina_json.entrada_en_calor.items() %}
+                <li><strong>{{ key | capitalize }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2 class="jumbotron text-center">Rutina</h2>
+        <div class="row">
+            {% for dia in rutina_json.dias %}
+                <div class="col-lg-6 mb-4">
+                    <h2>{{ dia.dia }}</h2>
+                    <ul>
+                        {% for ejercicio in dia.ejercicios %}
+                            <li>
+                                <strong>{{ ejercicio.nombre }}</strong>:
+                                {{ ejercicio.series }} series de {{ ejercicio.repeticiones }} 
+                                {% if ejercicio.peso %}
+                                    con {{ ejercicio.peso }} kg
+                                {% endif %}
+                                {% if ejercicio.comentario %}
+                                    ({{ ejercicio.comentario }})
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <p><strong>Estiramiento:</strong> {{ dia.estiramiento }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

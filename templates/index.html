@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %} Gym Tracker {% endblock %}
+
+{% block body %} 
+    <div class="container mt-3 px-4">
+        <h1 class="jumbotron text-center">Ingrese el ejercicio realizado</h1>
+        <form action="/agregar" method="post">
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" aria-describedby="fecha">
+                </div>
+                
+                <div class="col-lg-8 mb-3">
+                <label for="ejercicio" class="form-label">Ejercicio</label>
+                <input type="text" class="form-control" id="ejercicio" name="ejercicio" aria-describedby="ejercicio">
+                </div>
+
+                <div class="col-lg-4 mb-3">
+                    <label for="series" class="form-label">Series</label>
+                    <input type="number" class="form-control" id="series" name="series" aria-describedby="series">
+                </div>
+
+                <div class="col-lg-4 mb-3">
+                    <label for="repeticiones" class="form-label">Repeticiones</label>
+                    <input type="number" class="form-control" id="repeticiones" name="repeticiones" aria-describedby="repeticiones">
+                </div>
+
+                <div class="col-lg-4 mb-3">
+                    <label for="peso" class="form-label">Peso</label>
+                    <input type="number" class="form-control" id="peso" name="peso" aria-describedby="peso">
+                </div>
+
+                <button type="submit" class="btn btn-primary col-lg-2 offset-lg-10">Agregar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-responsive container mt-3">
+        <h2 class="jumbotron text-center">Ejercicios realizados</h2>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Ejercicio</th>
+                    <th>Series</th>
+                    <th>Rep</th>
+                    <th>Peso</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entrenamiento in entrenamientos %}
+                <tr>
+                    <td> {{ entrenamiento.fecha }} </td>
+                    <td> {{ entrenamiento.tipo_ejercicio }} </td>
+                    <td> {{ entrenamiento.series }} </td>
+                    <td> {{ entrenamiento.repeticiones }} </td>
+                    <td> {{ entrenamiento.peso }} </td>
+                    <td>
+                        <form action="/eliminar" method="post">
+                            <input  name="id" type="hidden" value="{{ entrenamiento.id }}">
+                            <button class="btn btn-primary" type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </td>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

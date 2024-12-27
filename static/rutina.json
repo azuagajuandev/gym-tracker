@@ -1,0 +1,204 @@
+{
+    "entrada_en_calor": {
+        "cardio": "5-7 minutos de carrera o remo",
+        "movilidad_dinamica": "5 minutos (c\u00edrculos de hombros, balanceo de brazos, movilidad de tronco)"
+    },
+    "dias": [
+        {
+            "dia": "Lunes",
+            "ejercicios": [
+                {
+                    "nombre": "Press de banca con barra",
+                    "series": 4,
+                    "repeticiones": "10-12",
+                    "peso": 25,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Press inclinado con mancuernas",
+                    "series": 3,
+                    "repeticiones": 10,
+                    "peso": 12.5,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Flexiones con elevaci\u00f3n de pierna alterna",
+                    "series": 3,
+                    "repeticiones": 12,
+                    "peso": null,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Plancha",
+                    "series": 4,
+                    "repeticiones": "60\"",
+                    "peso": null,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Crunches en banco declinado",
+                    "series": 4,
+                    "repeticiones": "15-20",
+                    "peso": null,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Russian twists con pesas",
+                    "series": 4,
+                    "repeticiones": "20 por lado",
+                    "peso": 8,
+                    "comentario": ""
+                }
+            ],
+            "estiramiento": "Estiramiento de pecho, hombros y core"
+        },
+        {
+            "dia": "Martes",
+            "ejercicios": [
+                {
+                    "nombre": "Dominadas asistidas",
+                    "series": 4,
+                    "repeticiones": "8-10",
+                    "peso": 40,
+                    "comentario": "10 rep"
+                },
+                {
+                    "nombre": "Remo con barra T",
+                    "series": 4,
+                    "repeticiones": "10-12",
+                    "peso": 20,
+                    "comentario": "12 rep"
+                },
+                {
+                    "nombre": "Jalones al pecho",
+                    "series": 4,
+                    "repeticiones": "10-12",
+                    "peso": 50,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Elevaciones de piernas colgado",
+                    "series": 4,
+                    "repeticiones": 15,
+                    "peso": null,
+                    "comentario": "15/15/15/12"
+                },
+                {
+                    "nombre": "Plancha lateral",
+                    "series": 3,
+                    "repeticiones": "45\" por lado",
+                    "peso": null,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Superman",
+                    "series": 4,
+                    "repeticiones": "15-20",
+                    "peso": null,
+                    "comentario": ""
+                }
+            ],
+            "estiramiento": "Estiramiento de espalda, hombros y core"
+        },
+        {
+            "dia": "Jueves",
+            "ejercicios": [
+                {
+                    "nombre": "Sentadillas",
+                    "series": 4,
+                    "repeticiones": "10-12",
+                    "peso": 50,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Prensa de pierna",
+                    "series": 4,
+                    "repeticiones": 12,
+                    "peso": 70,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Peso muerto rumano",
+                    "series": 3,
+                    "repeticiones": 12,
+                    "peso": 45,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Puente de gl\u00fateos",
+                    "series": 4,
+                    "repeticiones": 15,
+                    "peso": null,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Crunch inverso",
+                    "series": 3,
+                    "repeticiones": 15,
+                    "peso": null,
+                    "comentario": "Crunch incl"
+                },
+                {
+                    "nombre": "Bicicletas",
+                    "series": 3,
+                    "repeticiones": "20 por lado",
+                    "peso": null,
+                    "comentario": ""
+                }
+            ],
+            "estiramiento": "Estiramiento de cu\u00e1driceps, isquiotibiales, gl\u00fateos y core"
+        },
+        {
+            "dia": "Viernes",
+            "ejercicios": [
+                {
+                    "nombre": "Press militar con barra",
+                    "series": 4,
+                    "repeticiones": "10-12",
+                    "peso": 30,
+                    "comentario": "12 rep"
+                },
+                {
+                    "nombre": "Elevaciones laterales con mancuernas",
+                    "series": 3,
+                    "repeticiones": 12,
+                    "peso": 7.5,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Curl de b\u00edceps con barra",
+                    "series": 4,
+                    "repeticiones": "10-12",
+                    "peso": 20,
+                    "comentario": "Bien"
+                },
+                {
+                    "nombre": "Extensiones de tr\u00edceps asistidas",
+                    "series": 4,
+                    "repeticiones": "12-15",
+                    "peso": 40,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Mountain climbers",
+                    "series": 3,
+                    "repeticiones": "30\"",
+                    "peso": null,
+                    "comentario": ""
+                },
+                {
+                    "nombre": "Plancha con rodilla al pecho",
+                    "series": 3,
+                    "repeticiones": "10-12",
+                    "peso": null,
+                    "comentario": ""
+                }
+            ],
+            "estiramiento": "Estiramiento de b\u00edceps, tr\u00edceps, hombros y core"
+        }
+    ],
+    "progresion": {
+        "semana_1_2": "Usa los pesos recomendados (80-90% de tu m\u00e1ximo anterior). Ajusta si sientes que puedes completar las repeticiones con facilidad.",
+        "semana_3_4": "Aumenta 2,5-5 kg en los ejercicios principales o a\u00f1ade una repetici\u00f3n m\u00e1s en los ejercicios de resistencia."
+    }
+}
